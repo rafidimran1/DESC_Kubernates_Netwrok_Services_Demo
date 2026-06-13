@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: finance-service
+  namespace: networking-lab
+spec:
+  type: ClusterIP
+  selector:
+    app: finance-portal
+  ports:
+  - port: 80
+    targetPort: 80

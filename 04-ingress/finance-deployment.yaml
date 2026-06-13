@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: finance-portal
+  namespace: networking-lab
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: finance-portal
+  template:
+    metadata:
+      labels:
+        app: finance-portal
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
