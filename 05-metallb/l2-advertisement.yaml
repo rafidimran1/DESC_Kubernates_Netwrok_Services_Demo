@@ -1,0 +1,8 @@
+apiVersion: metallb.io/v1beta1
+kind: L2Advertisement
+metadata:
+  name: k3s-lab-l2-advertisement
+  namespace: metallb-system
+spec:
+  ipAddressPools:
+  - k3s-lab-pool

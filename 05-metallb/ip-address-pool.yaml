@@ -1,0 +1,11 @@
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: k3s-lab-pool
+  namespace: metallb-system
+spec:
+  addresses:
+  # IMPORTANT:
+  # Replace this range with unused IPs from your own local network.
+  # Example if your node IP is 172.16.129.234:
+  - 172.16.129.240-172.16.129.250
